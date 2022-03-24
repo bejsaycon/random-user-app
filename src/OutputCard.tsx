@@ -1,19 +1,17 @@
 
-interface Output{
-    
+interface Prop{
     usersData: {
-        results:[0]
-        info:{}
     }
 }
 
-export const OutputCard:React.FC<Output> = ({usersData}) =>{
-    const u = usersData.results[0];
+export const OutputCard:React.FC<Prop> = ({usersData}) =>{
+    // const {results, info}:DataValues = usersData;
+    
     return (
         <div className="below-input-box">
           <figure className="img-prof">
             <img
-            //   src={u.picture.large}
+            //   src={usersData.results[0].picture.large}
             //   className
               alt="USER-PROFILE"
             />

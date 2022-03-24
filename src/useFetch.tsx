@@ -9,6 +9,6 @@ export const useFetch = (url:string) => {
             setData(y);
         })
 
-      }, [url])
-      
+      }, [url]);
+    return data
 }
