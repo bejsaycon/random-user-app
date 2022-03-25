@@ -1,21 +1,35 @@
-
 interface Prop{
     usersData: {
+      results?: Array<Results>
+      info?: unknown
     }
 }
 
+interface Results {
+      name?: unknown
+      email: string
+      phone: string
+      picture?: Picture
+      location?: unknown
+}
+
+interface Picture {
+  large: string
+  medium : string
+  thumbnail:string
+}
+
+
+
 export const OutputCard = ({usersData}:Prop) =>{
-    console.log(usersData)
+    console.log("Results", usersData.results? usersData.results[0] : {}) //Error when I start to add the index
     return (
         <div className="below-input-box">
           <figure className="img-prof">
-            <img
-            // src={results[0].picture.large}
-            //   className
-              alt="USER-PROFILE"
-            />
+            <img alt="USER-PROFILE"
+            src = {usersData.results? usersData.results[0].picture?.large : ""} />
           </figure>
-    
+
           <div className="user-info-card">
               <div className="user-name user-details head-text">
                 <i className="fas fa-user"></i>
