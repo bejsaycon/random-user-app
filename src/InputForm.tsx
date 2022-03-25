@@ -4,7 +4,7 @@ interface SetState {
     setSeed: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const InputForm:React.FC<SetState> = ({setSeed}) => {
+export const InputForm = ({setSeed}:SetState) => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
