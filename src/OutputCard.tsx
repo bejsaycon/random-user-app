@@ -1,34 +1,4 @@
-interface Prop{
-  usersData: Result
-}
-interface Result {
-  name?: Name;
-  email: string;
-  phone: string;
-  picture?: Picture;
-  location?: Location;
-}
-interface Picture {
-  large: string;
-  medium: string;
-  thumbnail: string;
-}
-interface Name {
-  first: string
-  last: string
-  title: string
-}
-interface Location{ 
-  city: string
-  country: string
-  postcode: number
-  state: string
-  street: Street
-}
-interface Street{
-  number: number
-  name: string
-}
+import { Prop } from "./IfcFetchedData";
 export const OutputCard = ({usersData}:Prop) =>{
     console.log("Outputbox prop", usersData) //Error when I start to add the index
     return (
