@@ -20,7 +20,7 @@ export const useProfile = () => {
           postcode: 69,
           state: "",
           street: {
-            number: 66,
+            number: 69,
             name: ""
           }
         }

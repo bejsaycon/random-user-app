@@ -1,6 +1,6 @@
 import { Prop } from "./IfcFetchedData";
 export const OutputCard = ({usersData}:Prop) =>{
-    console.log("Outputbox prop", usersData) //Error when I start to add the index
+    console.log("Outputbox prop", usersData)
     return (
         <div className="below-input-box">
           <figure className="img-prof">
@@ -8,7 +8,6 @@ export const OutputCard = ({usersData}:Prop) =>{
             src = {usersData?.picture?.large} 
             />
           </figure>
-
           <div className="user-info-card">
               <div className="user-name user-details head-text">
                 <i className="fas fa-user"></i>
