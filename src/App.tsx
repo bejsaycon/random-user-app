@@ -10,7 +10,7 @@ import { useProfile } from "./useProfile";
 const App = () => {
   const [seed, setSeed] = useState("");
   const url: string = `https://randomuser.me/api/?seed=${seed}`; 
-  const data:UserData = useFetch(url); 
+  const data: UserData = useFetch(url); 
   const defVal: Results = useProfile();
   return (
     <div className="container">

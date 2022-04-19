@@ -6,7 +6,7 @@ interface SetState {
 export const InputForm = ({setSeed}:SetState) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSeed((event.currentTarget[0] as HTMLInputElement).value);
+    setSeed((event.currentTarget.seed as HTMLInputElement).value);
   };    
   return (
     <form className="form-container" onSubmit={handleSubmit}>
